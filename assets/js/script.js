@@ -38,22 +38,22 @@ left.addEventListener("click", () => {
     /*     const activeDote = document.querySelector(".slider .active")
         const dotes = document.querySelectorAll(`.slider .dots .dote`)
         const doteId = activeDote.id
-        const index = (doteId[doteId.length-1] == dotes.length-1) ? 0 : parseInt(doteId[doteId.length-1]) + 1
-        const nextDoteId = "dote" + index */
+        const index = (doteId[doteId.length-1] == dotes.length-1) ? 0 : parseInt(doteId[doteId.length-1]) - 1
+        const beforeDoteId = "dote" + index */
     const dotes = document.querySelectorAll(`.slider .dots .dote`)
-    const index = (activeDote == dotes.length - 1) ? 0 : activeDote + 1
-    const nextDoteId = "dote" + index
-    const nextDote = document.querySelector(`.slider #${nextDoteId}`)
-    nextDote.click()
+    const index = (activeDote == 0) ? dotes.length - 1 : activeDote - 1
+    const beforeDoteId = "dote" + index
+    const beforeDote = document.querySelector(`.slider #${beforeDoteId}`)
+    beforeDote.click()
 })
 right.addEventListener("click", () => {
     /*     const activeDote = document.querySelector(".slider .active")
         const dotes = document.querySelectorAll(`.slider .dots .dote`)
         const doteId = activeDote.id
-        const index = (doteId[doteId.length-1] == 0) ? dotes.length-1 : parseInt(doteId[doteId.length-1])-1
+        const index = (doteId[doteId.length-1] == 0) ? dotes.length-1 : parseInt(doteId[doteId.length-1])+1
         const nextDoteId = "dote" + index */
     const dotes = document.querySelectorAll(`.slider .dots .dote`)
-    const index = (activeDote == 0) ? dotes.length - 1 : activeDote - 1
+    const index = (activeDote == dotes.length - 1) ? 0 : activeDote + 1
     const nextDoteId = "dote" + index
     const nextDote = document.querySelector(`.slider #${nextDoteId}`)
     nextDote.click()
