@@ -8,8 +8,8 @@
 .slider {
     overflow: hidden;
     width: 80vw;
-    height: 65vh;
-    margin: 50px auto;
+    height: fit-content;
+    margin: 25px auto;
     padding: 24px;
     border: 2px solid orange;
     display: flex;
@@ -18,16 +18,18 @@
 
 
     .card {
-        max-width: 32% !important;
+        max-width: 31.8% !important;
         height: fit-content !important;
         flex-shrink: 0;
         padding: 0 32px;
         border-radius: 30px !important;
         text-align: center;
         background-color: rgb(255, 187, 98) !important;
-        margin-right: 24px !important;
+        margin-right: 25px !important;
+        margin-bottom: 40px !important;
         transition: 1s all;
         border: 2px solid black !important;
+
 
         .card-img {
             max-width: 130px;
@@ -69,9 +71,10 @@
     }
 
     .arrows {
-        width: calc(100% - 48px);
+        width: calc(100% + 10px);
         position: absolute;
-        top: 90%;
+        top: 50%;
+        left: -5px;
         transform: translateY(-50%);
         display: flex;
         justify-content: space-between;
@@ -80,7 +83,7 @@
             width: 32px;
             height: 32px;
             background: none;
-            border: 2px solid orange;
+            border: none;
             border-radius: 50%;
             cursor: pointer;
         }
@@ -103,16 +106,13 @@
     .slider .card {
         width: 100% !important;
         max-width: 100% !important;
-        margin-right: 24px !important;
     }
 
     .dots {
-        gap: 10px !important;
+        gap: 20px !important;
     }
 
     .arrows {
-        top: 92% !important;
-
         button {
             width: 24px;
             height: 24px;

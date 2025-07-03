@@ -29,7 +29,7 @@ const sliderMovment = (index) => {
     }
     dote.classList.add("active")
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.transform = `translateX(calc(-${index * 100}% - ${index * 24}px))`
+        slides[i].style.transform = `translateX(calc(-${index * 100}% - ${index * 25}px))`
     }
     activeDote = index
 }
